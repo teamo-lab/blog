@@ -45,7 +45,7 @@ Read https://gateway.teamo.ai/skill.md and follow the instructions to install Te
 ## Links
 
 - **Website:** https://router.teamolab.com
-- **Discord:** https://discord.gg/NN6SaDnpMb
+- **Discord:** https://discord.gg/tvAtTj2zHv
 - **Blog:** https://teamo-lab.github.io/blog/
 
 ## Keywords

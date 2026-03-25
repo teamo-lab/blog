@@ -88,7 +88,7 @@ No. USD billing, credit card or balance. No wallets, no USDC.
 The gateway is a managed service. The install skill is open.
 
 **Where's the TeamoRouter community?**
-[discord.gg/NN6SaDnpMb](https://discord.gg/NN6SaDnpMb)
+[discord.gg/tvAtTj2zHv](https://discord.gg/tvAtTj2zHv)
 
 ---
 

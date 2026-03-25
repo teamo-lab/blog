@@ -89,7 +89,7 @@ Before TeamoRouter, I had one speed: expensive. Now I actually match the model t
 
 Head to [router.teamolab.com](https://router.teamolab.com) and grab the skill.md link. Paste it into OpenClaw. Start routing.
 
-Join the Discord: [discord.gg/NN6SaDnpMb](https://discord.gg/NN6SaDnpMb)
+Join the Discord: [discord.gg/tvAtTj2zHv](https://discord.gg/tvAtTj2zHv)
 
 ## FAQ
 

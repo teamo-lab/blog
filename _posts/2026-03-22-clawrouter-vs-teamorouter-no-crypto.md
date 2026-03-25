@@ -138,7 +138,7 @@ The gateway is managed. The skill.md installer is open. ClawRouter is fully MIT.
 ClawRouter routes in <1ms locally. TeamoRouter adds about 20ms for the network hop. For conversational and agentic use, you won't notice.
 
 **Where's the TeamoRouter community?**
-[discord.gg/NN6SaDnpMb](https://discord.gg/NN6SaDnpMb)
+[discord.gg/tvAtTj2zHv](https://discord.gg/tvAtTj2zHv)
 
 ---
 

@@ -139,7 +139,7 @@ Switch routing modes:
 - `teamo-eco` — maximizes cost savings (DeepSeek R1 and Gemini Flash for routine tasks)
 
 Website: https://router.teamolab.com
-Discord: https://discord.gg/NN6SaDnpMb
+Discord: https://discord.gg/tvAtTj2zHv
 
 ---
 

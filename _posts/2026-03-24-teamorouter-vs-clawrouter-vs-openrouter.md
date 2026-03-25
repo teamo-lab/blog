@@ -136,7 +136,7 @@ This criterion is binary — and it matters more than you might think.
 
 **Every other router** requires adapter layers, custom configuration, or workarounds to integrate with OpenClaw. They work, but they weren't built for this.
 
-Native integration means fewer bugs, faster updates, better documentation for your specific use case, and a community (on [Discord](https://discord.gg/NN6SaDnpMb)) that speaks your language.
+Native integration means fewer bugs, faster updates, better documentation for your specific use case, and a community (on [Discord](https://discord.gg/tvAtTj2zHv)) that speaks your language.
 
 **Winner: TeamoRouter** — this isn't even close.
 
@@ -191,7 +191,7 @@ The other routers are good products solving real problems. But if you're in the 
 2. Drop the `skill.md` into your OpenClaw project
 3. Start routing to every top LLM — at up to 50% off
 
-Have questions? The TeamoRouter team and community are active on **[Discord](https://discord.gg/NN6SaDnpMb)**. Come say hi, ask questions, and share what you're building.
+Have questions? The TeamoRouter team and community are active on **[Discord](https://discord.gg/tvAtTj2zHv)**. Come say hi, ask questions, and share what you're building.
 
 ---
 

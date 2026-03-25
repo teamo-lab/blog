@@ -179,7 +179,7 @@ OpenClaw 2026.3.x or later.
 
 Join the TeamoRouter community on Discord for support, feature requests, and updates:
 
-**[Join the Discord](https://discord.gg/NN6SaDnpMb)**
+**[Join the Discord](https://discord.gg/tvAtTj2zHv)**
 
 ---
 
