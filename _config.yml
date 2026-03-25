@@ -1,0 +1,28 @@
+title: TeamoRouter Blog
+description: Save up to 50% on LLM API costs with smart routing for OpenClaw
+url: "https://teamo-lab.github.io"
+baseurl: "/blog"
+theme: minima
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+  - jekyll-sitemap
+
+author:
+  name: TeamoRouter
+  url: https://router.teamolab.com
+
+twitter:
+  card: summary
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+google_analytics:
+
+permalink: /:title/
