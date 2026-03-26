@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Claude Code rate limit on Max plan? The workaround developers are actually using in 2026"
-description: "Hitting rate limits on a $200/month Claude Max subscription? Here's what's causing it and the fix that actually works for OpenClaw agent workflows."
+title: "OpenClaw hitting API rate limits on Max plan? The workaround developers are actually using in 2026"
+description: "Hitting rate limits while using OpenClaw on a $200/month Claude Max subscription? Here's what's causing it and the fix that actually works."
 date: 2026-03-27
 categories: [tutorials, openclaw]
 tags: [openclaw, llm, ai, devtools, teamorouter, rate-limit, claude-max]
@@ -17,7 +17,7 @@ Here's what's causing this, the quick fixes, and the structural solution.
 
 ## Why you're hitting rate limits on a paid Max plan in 2026
 
-There are two completely different rate limit systems in Claude Code, and they produce identical error messages.
+When using OpenClaw with the Anthropic API, there are two completely different rate limit systems — and they produce identical error messages.
 
 ### Subscription usage quotas (weekly rolling windows)
 
@@ -31,12 +31,9 @@ Result: you can be at 16% of your weekly usage and still get rate-limited becaus
 
 ### The known bug (GitHub issues #29579 and #33094)
 
-Two active GitHub issues document a third problem — a rate limit bug that has nothing to do with actual usage:
+There's also a documented account-level bug affecting OpenClaw users on Max plans — where rate limits trigger on literally every command regardless of actual usage.
 
-- **Issue #29579** (53 upvotes): users on Max 20x hitting "rate limit reached" at 16% reported usage, with $11.73 burned in under an hour and a 7-day lockout afterward.
-- **Issue #33094**: Max plan users receiving "API Error: Rate limit reached" on *every* command — including `claude logout` — regardless of token consumption. Persists across machines and fresh installs.
-
-If you're rate-limited on literally every command, you've hit the account-level bug, not a usage issue. Workaround: `claude logout`, delete cached credentials in `~/.config/claude` or `%APPDATA%\Claude`, then log back in.
+If this is you, try: `claude logout`, delete cached credentials in `~/.config/claude` or `%APPDATA%\Claude`, then log back in. Fixes it for most people. If not, the structural fix below is your next step.
 
 ---
 
@@ -44,7 +41,7 @@ If you're rate-limited on literally every command, you've hit the account-level 
 
 Before changing your architecture, try these in order:
 
-1. Credential reset: `claude logout` → delete `~/.config/claude` → `claude login`. Fixes the #33094 bug for most users.
+1. Credential reset: `claude logout` → delete `~/.config/claude` → `claude login`. Fixes the account-level rate limit bug for most OpenClaw users.
 
 2. `/compact` command: shrinks your conversation context mid-session, reducing tokens per subsequent request. Buys time when you're hitting per-minute TPM limits.
 
@@ -52,7 +49,7 @@ Before changing your architecture, try these in order:
 
 4. Off-peak timing: Mon-Thu US business hours are the tightest. Late nights and weekends consistently have more headroom.
 
-5. Separate claude.ai usage: Claude Code and the web interface share the same quota pool. If you're using claude.ai during the day, your coding session headroom shrinks proportionally.
+5. Keep claude.ai usage separate: your OpenClaw sessions and the web interface share the same quota pool. If you're using claude.ai during the day, your OpenClaw headroom shrinks proportionally.
 
 These are maintenance moves, not solutions. If you're doing serious agent work — long sessions, automated pipelines, multi-file refactors — you'll keep hitting limits with these alone.
 
@@ -60,7 +57,7 @@ These are maintenance moves, not solutions. If you're doing serious agent work �
 
 ## The structural fix: routing routine tasks away from Anthropic
 
-The reason rate limits hurt so much with OpenClaw agents is that *most requests don't actually need Claude*. A rough breakdown of what a typical coding session looks like:
+The reason rate limits hurt so much for OpenClaw users is that *most requests don't actually need Claude*. A rough breakdown of what a typical coding session looks like:
 
 | Task type | Typical % of requests | Actually needs Claude? |
 |-----------|----------------------|------------------------|
@@ -131,7 +128,7 @@ If you used Claude Code in late 2025 and are newly frustrated in 2026, three thi
 
 1. Anthropic tightened Opus 4.6 caps — users across Max tiers report about 40% lower effective token throughput vs. November-December 2025.
 
-2. OpenClaw agent workloads got heavier. As Claude Code matured into an autonomous coding agent (not just a chat interface), typical sessions trigger far more API calls than in 2025.
+2. OpenClaw agent workloads got heavier. As OpenClaw matured into an autonomous coding agent (not just a chat interface), typical sessions trigger far more API calls than in 2025.
 
 3. The Google AI Pro loophole closed. In early January 2026, Google stopped allowing OpenClaw users to route through Google AI Pro/Ultra accounts as an unofficial cost workaround. Developers who lost this route are now directly absorbing full API costs — which pushed many into rate-limit territory.
 
